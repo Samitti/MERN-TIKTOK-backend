@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/Samitti/MERN-TICTOK-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "mongoose": "^6.1.4"
   },
   "engines": {
     "node": "14.17.0"
-  }  
+  }
 }

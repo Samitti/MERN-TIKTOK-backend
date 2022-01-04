@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from 'mongoose';
+import Cors from 'cors';
 
 import Videos from './dbModel.js';
 
@@ -9,11 +10,12 @@ const port = process.env.PORT || 9000;
 
 // midlewares
 app.use(express.json());
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow_Origin", "*"),
-        res.setHeader("Access-Control-Allow-Headers", "*"),
-        next();
-});
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow_Origin", "*"),
+//         res.setHeader("Access-Control-Allow-Headers", "*"),
+//         next();
+// });
+app.use(Cors());
 
 // DB config
 const connection_url = 'mongodb+srv://admin:OykJ2vWeq5lkfYcy@cluster0.duyfm.mongodb.net/tiktokDB?retryWrites=true&w=majority';

@@ -20,7 +20,7 @@ const connection_url = 'mongodb+srv://admin:OykJ2vWeq5lkfYcy@cluster0.duyfm.mong
 
 mongoose.connect(connection_url);
 // api endpoints
-app.get('/', (req, res) => res.status(200).send('Hello Sami'));
+app.get('/', (req, res) => res.status(200).send('Hello World'));
 
 app.get('/v2/posts', (req, res) => {
     
